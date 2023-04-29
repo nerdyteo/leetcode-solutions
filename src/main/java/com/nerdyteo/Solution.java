@@ -1,7 +1,6 @@
 package com.nerdyteo;
 
-import com.nerdyteo.exception.InvalidAnswerException;
-
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,7 +10,8 @@ public interface Solution<D, R> {
 
     R solve(D data);
 
-    default void execute() {
+    default Result execute() {
+        final List<InvalidAnswer> invalidAnswers = new LinkedList<>();
         testCases().stream()
                 .filter(Objects::nonNull)
                 .filter(testcase -> Objects.nonNull(testcase.problem()))
@@ -19,8 +19,9 @@ public interface Solution<D, R> {
                 .forEach(testcase -> {
                     final R solutionAnswer = solve(testcase.problem());
                     if (!testcase.validate(solutionAnswer)) {
-                        throw new InvalidAnswerException(this.getClass(), testcase, solutionAnswer);
+                        invalidAnswers.add(new InvalidAnswer(testcase, solutionAnswer));
                     }
                 });
+        return new Result(testCases().size(), invalidAnswers);
     }
 }
