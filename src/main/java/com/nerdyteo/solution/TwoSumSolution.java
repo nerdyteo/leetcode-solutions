@@ -28,6 +28,10 @@ public class TwoSumSolution implements Solution<TwoSumSolution.TwoSumProblem, In
         );
     }
 
+    /*
+        Runtime: 2 ms (81.94%)
+        Memory: 43.1 MB (29.43%)
+     */
     @Override
     public Integer[] solve(TwoSumProblem data) {
         final int[] nums = data.nums;
