@@ -19,7 +19,7 @@ public interface Solution<D, R> {
                 .forEach(testcase -> {
                     final R solutionAnswer = solve(testcase.problem());
                     if (!testcase.validate(solutionAnswer)) {
-                        throw new InvalidAnswerException(this.getClass(), testcase.answer(), solutionAnswer);
+                        throw new InvalidAnswerException(this.getClass(), testcase, solutionAnswer);
                     }
                 });
     }
