@@ -1,5 +1,7 @@
 package com.nerdyteo.solution;
 
+import com.nerdyteo.Solution;
+import com.nerdyteo.Testcase;
 import lombok.Builder;
 
 import java.util.HashMap;

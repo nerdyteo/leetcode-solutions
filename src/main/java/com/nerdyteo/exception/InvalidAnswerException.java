@@ -1,10 +1,9 @@
 package com.nerdyteo.exception;
 
-import com.nerdyteo.solution.Solution;
+import com.nerdyteo.Solution;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import java.util.Objects;
 import java.util.function.Function;
 
 public class InvalidAnswerException extends RuntimeException {

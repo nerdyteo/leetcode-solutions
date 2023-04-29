@@ -1,7 +1,6 @@
 package com.nerdyteo;
 
 import com.nerdyteo.exception.InvalidAnswerException;
-import com.nerdyteo.solution.Solution;
 import com.nerdyteo.solution.TwoSumSolution;
 import lombok.extern.slf4j.Slf4j;
 

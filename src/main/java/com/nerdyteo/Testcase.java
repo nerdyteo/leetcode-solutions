@@ -1,4 +1,4 @@
-package com.nerdyteo.solution;
+package com.nerdyteo;
 
 import lombok.Builder;
 import org.apache.commons.lang3.ObjectUtils;
